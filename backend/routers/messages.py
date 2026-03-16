@@ -2,7 +2,7 @@ import json
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from backend.database import (
-    get_messages,
+    get_messages as db_get_messages,
     add_message,
     update_session_timestamp,
 )
@@ -15,7 +15,7 @@ router = APIRouter()
 @router.get("", response_model=list[Message])
 async def get_messages(session_id: int):
     """Get all messages for a session."""
-    messages = await get_messages(session_id)
+    messages = await db_get_messages(session_id)
     return messages
 
 
