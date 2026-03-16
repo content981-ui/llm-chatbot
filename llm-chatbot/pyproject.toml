@@ -1,0 +1,15 @@
+[project]
+name = "llm-chatbot"
+version = "0.1.0"
+description = "Local LLM Chatbot - ChatGPT UI clone powered by Ollama"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.135.1",
+    "httpx>=0.28.1",
+    "pydantic>=2.12.5",
+    "requests>=2.32.5",
+    "streamlit>=1.55.0",
+    "uvicorn>=0.42.0",
+]
