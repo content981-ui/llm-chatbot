@@ -2,7 +2,8 @@ import httpx
 from typing import AsyncGenerator
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL = "qwen3.5:0.8b"
+# MODEL = "qwen3.5:0.8b"
+MODEL = "qwen2.5:0.5b"
 
 
 async def stream_chat(messages: list[dict]) -> AsyncGenerator[str, None]:
